@@ -1,0 +1,48 @@
+{
+  "name": "react-webpack-babel-sass-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodemonki/react-webpack-babel-sass-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "Tom Jane",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kodemonki/react-webpack-babel-sass-boilerplate/issues"
+  },
+  "homepage": "https://github.com/kodemonki/react-webpack-babel-sass-boilerplate#readme",
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-redux": "^5.1.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.25.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}

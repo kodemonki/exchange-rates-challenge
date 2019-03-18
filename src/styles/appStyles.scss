@@ -1,0 +1,40 @@
+$theme-font: "Verdana", Times, serif;
+$color-primary: blue;
+$color-secondary: orange;
+$color-disabled: grey;
+$padding-button: 8px;
+
+body {
+  font-family: $theme-font;
+  color: black;
+  background-color: lightgrey;
+  font-size: 62.5%;
+  line-height: 1.4;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  display: inline-block;
+  padding: $padding-button;
+}
+
+.NavigationBar {
+  & a[href] {
+    color: $color-primary;
+  }
+  &__item {
+    &--active {
+      & h3 {
+        color: $color-disabled;
+      }
+    }
+  }
+}
