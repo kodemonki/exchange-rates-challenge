@@ -10,14 +10,16 @@ class App extends React.Component {
   render() {
     return (
       <Router basename="/">
-        <div className="App">
+        <div className="Router">
           <NavigationBar />
-          <Route exact path="/" render={props => <h1>home</h1>} />
-          <Route exact path="/about" render={props => <h1>about</h1>} />
-          <Route
-            path="/exchange-rates"
-            render={props => <h1>exchange-rates</h1>}
-          />
+          <div className="Content">
+            <Route exact path="/" render={props => <h1>home</h1>} />
+            <Route exact path="/about" render={props => <h1>about</h1>} />
+            <Route
+              path="/exchange-rates"
+              render={props => <h1>exchange-rates</h1>}
+            />
+          </div>
         </div>
       </Router>
     );
