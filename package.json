@@ -1,29 +1,24 @@
 {
-  "name": "react-webpack-babel-sass-boilerplate",
+  "name": "ExchangeRateChallenge",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kodemonki/react-webpack-babel-sass-boilerplate.git"
+    "url": "git+https://github.com/kodemonki/exchange-rates-challenge"
   },
   "keywords": [],
   "author": "Tom Jane",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kodemonki/react-webpack-babel-sass-boilerplate/issues"
-  },
-  "homepage": "https://github.com/kodemonki/react-webpack-babel-sass-boilerplate#readme",
   "dependencies": {
     "axios": "^0.18.0",
     "formik": "^1.5.1",
     "history": "^4.7.2",
-    "http-server": "^0.11.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-formik-ui": "^2.3.14",
@@ -47,7 +42,6 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.20.3",
     "webpack": "^4.25.1",
-    "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   }

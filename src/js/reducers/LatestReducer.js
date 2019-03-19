@@ -6,15 +6,11 @@ const initialState = {
 
 const latestReducer = (state = initialState, action) => {
   let newState = state;
-  //console.log(state);
   switch (action.type) {
     case "GET_LATEST_RESPONSE":
-      console.log("GET_LATEST_RESPONSE", action.payload);
-
-      //newState = { ...state };
-      newState = Object.assign({}, state);
+      //console.log("GET_LATEST_RESPONSE", action.payload);
+      newState = { ...state };
       let newRates = [];
-      newRates.push({ title: action.payload.data.base, rate: 1 });
       for (var key in action.payload.data.rates) {
         newRates.push({ title: key, rate: action.payload.data.rates[key] });
       }
@@ -26,7 +22,6 @@ const latestReducer = (state = initialState, action) => {
       console.log("GET_LATEST_ERROR", action.payload);
       break;
   }
-  //console.log(newState);
   return newState;
 };
 

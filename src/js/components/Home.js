@@ -3,7 +3,7 @@ import React from "react";
 export const Home = props => {
   return (
     <div className="Home">
-      <h1>Latest Rates</h1>
+      <h1>Latest</h1>
       <table className="">
         <tbody>
           {props.latestRates &&

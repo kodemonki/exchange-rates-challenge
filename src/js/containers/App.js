@@ -7,14 +7,9 @@ import { Home } from "../components/Home";
 import ExchangeRates from "../components/ExchangeRates";
 
 import { getLatestAction } from "../actions/getLatestAction";
+import { getSearchAction } from "../actions/getSearchAction";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    let today = new Date();
-    let now = today.getYear() + today.getMonth() + today.getDay();
-    this.state = { dataLoaded: false, base: "EUR", date: now };
-  }
   componentDidMount() {
     this.props.getLatestAction();
   }
@@ -38,6 +33,8 @@ class App extends React.Component {
                   base={this.props.base}
                   latestRates={this.props.latestRates}
                   lastDate={this.props.lastDate}
+                  getSearchAction={this.props.getSearchAction}
+                  searchResults={this.props.searchResults}
                 />
               )}
             />
@@ -52,7 +49,8 @@ const mapStateToProps = state => {
   return {
     latestRates: state.latestReducer.rates,
     lastDate: state.latestReducer.date,
-    base: state.latestReducer.base
+    base: state.latestReducer.base,
+    searchResults: state.searchReducer.searchResults
   };
 };
 
@@ -60,6 +58,9 @@ const mapDispatchToProps = dispatch => {
   return {
     getLatestAction: () => {
       dispatch(getLatestAction());
+    },
+    getSearchAction: query => {
+      dispatch(getSearchAction(query));
     }
   };
 };
