@@ -3,21 +3,43 @@ import { connect } from "react-redux";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import { NavigationBar } from "../components/NavigationBar";
+import { Home } from "../components/Home";
+import ExchangeRates from "../components/ExchangeRates";
 
-import { dumbAction } from "../actions/dumbAction";
+import { getLatestAction } from "../actions/getLatestAction";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    let today = new Date();
+    let now = today.getYear() + today.getMonth() + today.getDay();
+    this.state = { dataLoaded: false, base: "EUR", date: now };
+  }
+  componentDidMount() {
+    this.props.getLatestAction();
+  }
   render() {
     return (
       <Router basename="/">
         <div className="Router">
           <NavigationBar />
           <div className="Content">
-            <Route exact path="/" render={props => <h1>home</h1>} />
-            <Route exact path="/about" render={props => <h1>about</h1>} />
             <Route
-              path="/exchange-rates"
-              render={props => <h1>exchange-rates</h1>}
+              exact
+              path="/"
+              render={props => <Home latestRates={this.props.latestRates} />}
+            />
+            <Route exact path="/about" render={props => <h1>About</h1>} />
+            <Route
+              exact
+              path="/exchangerates"
+              render={props => (
+                <ExchangeRates
+                  base={this.props.base}
+                  latestRates={this.props.latestRates}
+                  lastDate={this.props.lastDate}
+                />
+              )}
             />
           </div>
         </div>
@@ -28,14 +50,16 @@ class App extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    initialised: state.dumbReducer.initialised
+    latestRates: state.latestReducer.rates,
+    lastDate: state.latestReducer.date,
+    base: state.latestReducer.base
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    consoleLog: message => {
-      dispatch(dumbAction(message));
+    getLatestAction: () => {
+      dispatch(getLatestAction());
     }
   };
 };

@@ -7,20 +7,20 @@ export const NavigationBar = props => {
       <ol>
         <li>
           <NavLink exact to="/" activeClassName="NavigationBar__item--active">
-            <h3>Home</h3>
+            <h2>Home</h2>
           </NavLink>
         </li>
         <li>
           <NavLink to="/about" activeClassName="NavigationBar__item--active">
-            <h3>About</h3>
+            <h2>About</h2>
           </NavLink>
         </li>
         <li>
           <NavLink
-            to="/exchange-rates"
+            to="/exchangerates"
             activeClassName="NavigationBar__item--active"
           >
-            <h3>Exchange Rates</h3>
+            <h2>Exchange Rates</h2>
           </NavLink>
         </li>
       </ol>
