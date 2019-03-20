@@ -28,7 +28,7 @@ export const About = props => {
       </h2>
       <p>
         I decided to use a mobile first simple layout. I am not a designer and
-        this is not where my strengths are. I made the main navigatation move
+        this is not where my strengths are. I made the main navigation move
         depending on the platform. When people hold their phone the buttons at
         the bottom are easiest to reach so this makes is easier to use. When on
         desktop it reverts to the usual top nav position. I used a plugin for
@@ -48,7 +48,7 @@ export const About = props => {
         it all working but I lost time, so could only add basic render testing.
       </p>
       <p>
-        I half implimented the bonus feature of historic data, I was going to
+        I half implemented the bonus feature of historic data, I was going to
         use a charting tool and display the data graphically, but I dont want to
         spend more than 2 days on it. I was passing the currency parameter, and
         picking it up from the Currency component, I started the action and
