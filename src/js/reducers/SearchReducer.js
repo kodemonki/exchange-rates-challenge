@@ -17,6 +17,8 @@ const searchReducer = (state = initialState, action) => {
     case "GET_SEARCH_ERROR":
       console.log("GET_SEARCH_ERROR", action.payload);
       break;
+    default:
+    // do nothing
   }
   return newState;
 };

@@ -21,6 +21,8 @@ const latestReducer = (state = initialState, action) => {
     case "GET_LATEST_ERROR":
       console.log("GET_LATEST_ERROR", action.payload);
       break;
+    default:
+    // do nothing
   }
   return newState;
 };

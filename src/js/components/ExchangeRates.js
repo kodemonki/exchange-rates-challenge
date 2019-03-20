@@ -1,5 +1,6 @@
 import React from "react";
-import { Formik, Field, ErrorMessage } from "formik";
+import { Formik } from "formik";
+
 import { Form, Datepicker, Select, SubmitBtn } from "react-formik-ui";
 
 export default class ExchangeRates extends React.Component {
