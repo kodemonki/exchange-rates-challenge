@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Home = props => {
   return (
@@ -10,7 +11,15 @@ export const Home = props => {
             props.latestRates.map((item, index) => {
               return (
                 <tr key={index}>
-                  <td style={{ textAlign: "right" }}>{item.title} :</td>
+                  <td style={{ textAlign: "right" }}>
+                    <Link
+                      to={"currency/" + item.title}
+                      params={{ testvalue: "hello" }}
+                    >
+                      {item.title}
+                    </Link>{" "}
+                    :
+                  </td>
                   <td style={{ textAlign: "left" }}> {item.rate}</td>
                 </tr>
               );

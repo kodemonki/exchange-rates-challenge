@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { Formik } from "formik";
 
 import { Form, Datepicker, Select, SubmitBtn } from "react-formik-ui";
@@ -55,7 +57,15 @@ export default class ExchangeRates extends React.Component {
                 this.props.searchResults.map((item, index) => {
                   return (
                     <tr key={index}>
-                      <td style={{ textAlign: "right" }}>{item.title} :</td>
+                      <td style={{ textAlign: "right" }}>
+                        <Link
+                          to={"currency/" + item.title}
+                          params={{ testvalue: "hello" }}
+                        >
+                          {item.title}
+                        </Link>{" "}
+                        :
+                      </td>
                       <td style={{ textAlign: "left" }}> {item.rate}</td>
                     </tr>
                   );
