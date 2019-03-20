@@ -16,6 +16,8 @@ I had a bit of trouble setting up the test suite. I usually do things the hard w
 
 I half implemented the bonus feature of historic data, I was going to use a charting tool and display the data graphically, but I don't want to spend more than 2 days on it. I was passing the currency parameter, and picking it up from the Currency component, I started the action and reducer also.
 
+One of the libraries I used for speed for some reason was breaking one of the tests. I think it has to do with an incompatible module syntax, or possibly a bug with the implementation of create-react-app. In the real world I would have removed these components, but I didn't feel it was worth investigating this for this demo.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

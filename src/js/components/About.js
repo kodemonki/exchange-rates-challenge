@@ -54,6 +54,13 @@ export const About = props => {
         picking it up from the Currency component, I started the action and
         reducer also.
       </p>
+      <p>
+        One of the libraries I used for speed for some reason was breaking one
+        of the tests. I think it has to do with an incompatible module syntax,
+        or possibly a bug with the implementation of create-react-app. In the
+        real world I would have removed these components, but I didn't feel it
+        was worth investigating this for this demo.
+      </p>
     </div>
   );
 };
