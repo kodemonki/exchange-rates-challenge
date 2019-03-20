@@ -1,4 +1,4 @@
-## Exchange Rate Challenge
+# Exchange Rate Challenge
 
 I spent roughly 2 days on this, I am tempted to keep going, but I think you will get a good idea of my skill level based on what I have done in that time.
 
